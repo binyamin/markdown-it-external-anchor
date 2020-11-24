@@ -1,7 +1,7 @@
 {
   "name": "markdown-it-external-anchor",
   "version": "1.0.0",
-  "private": "false",
+  "private": false,
   "description": "Mark external, absolute links with necessary attributes",
   "main": "index.js",
   "scripts": {
