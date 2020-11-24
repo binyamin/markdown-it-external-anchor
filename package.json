@@ -1,0 +1,34 @@
+{
+  "name": "markdown-it-external-anchor",
+  "version": "1.0.0",
+  "private": "false",
+  "description": "Mark external, absolute links with necessary attributes",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binyamin/markdown-it-external-anchor.git"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "link",
+    "external",
+    "XSS"
+  ],
+  "author": "Binyamin Aron Green (https://binyam.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binyamin/markdown-it-external-anchor/issues"
+  },
+  "homepage": "https://github.com/binyamin/markdown-it-external-anchor#readme",
+  "devDependencies": {
+    "ava": "^3.13.0",
+    "markdown-it": "^12.0.2"
+  }
+}
