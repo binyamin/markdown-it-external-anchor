@@ -4,7 +4,7 @@
  *
  * @param {import("markdown-it")} md
  * @param {object} options
- * @param {string?} options.domain domain to consider an internal link. (no https://)
+ * @param {string?} options.domain domain to consider an internal link.
  * @param {string?} options.class add a class (preserves existing)
  */
 
