@@ -26,7 +26,7 @@ md.render("[text](https://example.com)");
 
 ### Options
 - **domain** (default: `null`) - A domain which is considered an internal link.
-    - When provided, localhost is implicit.
+    - When _domain_ is provided, localhost is implicit.
 - **class** (default: `null`) - a class name, for CSS purposes
 
 ## Contributing
