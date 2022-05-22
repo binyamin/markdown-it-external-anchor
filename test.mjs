@@ -1,9 +1,12 @@
-const test = require("ava");
+import test from "ava";
+import MarkdownIt from "markdown-it";
+import markdownItExternalAnchor from "./index.js";
+
+const md = MarkdownIt();
 
 // Note: example.com is external, example.org is internal
 
-const md = require("markdown-it")();
-md.use(require("./"), {domain: 'example.org'});
+md.use(markdownItExternalAnchor, {domain: 'example.org'});
 
 test('external link has added attributes', (t) => {
     const example = "[text](https://example.com)";
