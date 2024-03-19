@@ -29,6 +29,6 @@
   "homepage": "https://github.com/binyamin/markdown-it-external-anchor#readme",
   "devDependencies": {
     "ava": "^4.2.0",
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^14.1.0"
   }
 }
