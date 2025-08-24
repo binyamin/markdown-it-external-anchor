@@ -15,7 +15,7 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
-## Unreleased
+## [2.0.0] - 2025-08-24
 
 ### Changed
 
@@ -29,3 +29,4 @@ and this project tries to adhere to
 - Allow adding a class to external links
 
 [1.0.0]: https://github.com/binyamin/markdown-it-external-anchor/releases/tag/v1.0.0
+[2.0.0]: https://github.com/binyamin/markdown-it-external-anchor/releases/tag/v2.0.0
