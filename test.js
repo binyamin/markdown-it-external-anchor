@@ -1,4 +1,4 @@
-import test from 'ava';
+import { test } from 'node:test';
 import MarkdownIt from 'markdown-it';
 import mod from './index.js';
 
@@ -11,20 +11,20 @@ md.use(mod, { domain: 'example.org' });
 test('external link has added attributes', (t) => {
 	const example = '[text](https://example.com)';
 	const result = md.renderInline(example);
-	t.true(result.includes(`rel="noopener noreferrer"`));
-	t.true(result.includes(`target="_blank"`));
+	t.assert.ok(result.includes(`rel="noopener noreferrer"`));
+	t.assert.ok(result.includes(`target="_blank"`));
 });
 
 test('internal, relative link has no added attributes', (t) => {
 	const example = '[text](/example)';
 	const result = md.renderInline(example);
-	t.false(result.includes(`rel="noopener noreferrer"`));
-	t.false(result.includes(`target="_blank"`));
+	t.assert.ok(!result.includes(`rel="noopener noreferrer"`));
+	t.assert.ok(!result.includes(`target="_blank"`));
 });
 
 test('internal, absolute link has no added attributes', (t) => {
 	const example = '[text](https://example.org)}';
 	const result = md.renderInline(example);
-	t.false(result.includes(`rel="noopener noreferrer"`));
-	t.false(result.includes(`target="_blank"`));
+	t.assert.ok(!result.includes(`rel="noopener noreferrer"`));
+	t.assert.ok(!result.includes(`target="_blank"`));
 });
