@@ -6,34 +6,41 @@ Mark external, absolute links with appropriate rel & target attributes
 - Prevents XSS attacks & provides good UX
 - Does not affect HTML within markdown
 
-> **Note**: If you want anything at all, just open an issue or [contact me](https://binyam.in/contact).
+## Usage
 
-## Install
+### Install
+
 ```console
 $ npm install --save markdown-it markdown-it-external-anchor
 ```
 
-## Usage
+### Example
+
 ```js
-const md = require("markdown-it")();
-md.use(require("markdown-it-external-anchor"), {
-    domain: "example.net",
-    class: "external"
+import md from 'markdown-it';
+import pluginExternalAnchor from 'markdown-it-external-anchor';
+
+md.use(pluginExternalAnchor, {
+    domain: 'example.net',
+    class: 'external'
 });
 
-md.render("[text](https://example.com)");
+md.render('[text](https://example.com)'); // => <a href="https://example/com" rel="noopener noreferrer" target="_blank">text</a>
 ```
 
 ### Options
 - **domain** (default: `null`) - A domain which is considered an internal link.
     - When _domain_ is provided, localhost is implicit.
-- **class** (default: `null`) - a class name, for CSS purposes
+- **class** (default: `null`) - a class name
 
-## Contributing
-You can help by reporting bugs, suggesting features, or just giving general feedback! See the [contributing guidelines](https://github.com/binyamin/markdown-it-external-anchor/blob/main/CONTRIBUTING.md) for more information.
+## Maintenance
 
-### Maintenance
-This is just a personal project, so I don't expect contributions. That said, I'm open to all suggestions.
+This is just a personal project. I do not consider it "released". That said, I'm
+open to suggestions and contributions.
 
-## License
-[MIT](https://github.com/binyamin/markdown-it-external-anchor/blob/main/LICENSE) © [Binyamin Green](https://binyam.in)
+## Legal
+
+All source-code is provided under the terms of
+[the MIT license](https://github.com/binyamin/markdown-it-external-anchor/blob/main/LICENSE).
+
+Copyright 2025 Binyamin Aron Green.
