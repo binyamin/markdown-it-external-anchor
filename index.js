@@ -12,11 +12,11 @@ export default function (md, options = {}) {
 	// Finds external links
 	let regex = /^https?:\/\//;
 
-	if (!!options.domain) {
+	if (options.domain) {
 		// Sanitize domain - remove the protocol, if existing
 		const domain = options.domain.replace(/^https?:\/\//, '');
 
-		regex = RegExp(`^https?:\/\/(?!${domain}|localhost)`);
+		regex = RegExp(`^https?://(?!${domain}|localhost)`);
 	}
 
 	/**
@@ -24,7 +24,7 @@ export default function (md, options = {}) {
 	 */
 	function link_external({ tokens }) {
 		// Iterate through tokens, looking for links
-		for (let t of tokens) {
+		for (const t of tokens) {
 			// There are no tokens, or we got an empty one (skip)
 			if (!t) continue;
 
@@ -39,11 +39,11 @@ export default function (md, options = {}) {
 				continue;
 			}
 
-			for (let c of t.children) {
+			for (const c of t.children) {
 				// It's not a link (skip)
 				if (c.type !== 'link_open') continue;
 
-				let href = c.attrGet('href');
+				const href = c.attrGet('href');
 
 				// It's a link tag, but the url is missing (skip)
 				if (!href) continue;
@@ -56,7 +56,7 @@ export default function (md, options = {}) {
 				// Note: `attrJoin` preserves existing values
 				c.attrJoin('rel', 'noopener noreferrer');
 				c.attrSet('target', '_blank');
-				if (!!options.class) c.attrJoin('class', options.class);
+				if (options.class) c.attrJoin('class', options.class);
 			}
 		}
 	}
