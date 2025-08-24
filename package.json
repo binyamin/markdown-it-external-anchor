@@ -1,35 +1,38 @@
 {
-  "name": "markdown-it-external-anchor",
-  "version": "1.0.0",
-  "private": false,
+	"name": "markdown-it-external-anchor",
+	"version": "1.0.0",
+	"private": false,
 	"type": "module",
-  "main": "index.js",
+	"main": "index.js",
 	"module": "./index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/binyamin/markdown-it-external-anchor.git"
-  },
-	"description": "Mark external, absolute links with necessary attributes",
-  "keywords": [
-    "markdown-it",
-    "markdown-it-plugin",
-    "link",
-    "external",
-    "XSS"
-  ],
-  "author": "Binyamin Aron Green (https://binyam.in/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/binyamin/markdown-it-external-anchor/issues"
-  },
-  "homepage": "https://github.com/binyamin/markdown-it-external-anchor#readme",
-	"scripts": {
-		"test": "ava"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/binyamin/markdown-it-external-anchor.git"
 	},
-  "devDependencies": {
-    "ava": "^6.4.1",
-    "markdown-it": "^14.1.0"
-  },
+	"description": "Mark external, absolute links with necessary attributes",
+	"keywords": [
+		"markdown-it",
+		"markdown-it-plugin",
+		"link",
+		"external",
+		"XSS"
+	],
+	"author": "Binyamin Aron Green (https://binyam.in/)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/binyamin/markdown-it-external-anchor/issues"
+	},
+	"homepage": "https://github.com/binyamin/markdown-it-external-anchor#readme",
+	"scripts": {
+		"test": "ava",
+		"lint": "biome check",
+		"fmt": "biome format --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "~2.2.2",
+		"ava": "^6.4.1",
+		"markdown-it": "^14.1.0"
+	},
 	"peerDependencies": {
 		"markdown-it": "^14.0.0"
 	}
