@@ -1,12 +1,12 @@
 import test from "ava";
 import MarkdownIt from "markdown-it";
-import markdownItExternalAnchor from "./index.js";
+import mod from "./index.js";
 
 const md = MarkdownIt();
 
 // Note: example.com is external, example.org is internal
 
-md.use(markdownItExternalAnchor, {domain: 'example.org'});
+md.use(mod, {domain: 'example.org'});
 
 test('external link has added attributes', (t) => {
     const example = "[text](https://example.com)";

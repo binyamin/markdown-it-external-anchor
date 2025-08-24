@@ -2,18 +2,14 @@
   "name": "markdown-it-external-anchor",
   "version": "1.0.0",
   "private": false,
-  "description": "Mark external, absolute links with necessary attributes",
+	"type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "ava"
-  },
-  "files": [
-    "index.js"
-  ],
+	"module": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/binyamin/markdown-it-external-anchor.git"
   },
+	"description": "Mark external, absolute links with necessary attributes",
   "keywords": [
     "markdown-it",
     "markdown-it-plugin",
@@ -27,8 +23,14 @@
     "url": "https://github.com/binyamin/markdown-it-external-anchor/issues"
   },
   "homepage": "https://github.com/binyamin/markdown-it-external-anchor#readme",
+	"scripts": {
+		"test": "ava"
+	},
   "devDependencies": {
-    "ava": "^4.2.0",
-    "markdown-it": "^13.0.1"
-  }
+    "ava": "^6.4.1",
+    "markdown-it": "^14.1.0"
+  },
+	"peerDependencies": {
+		"markdown-it": "^14.0.0"
+	}
 }

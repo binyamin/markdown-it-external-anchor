@@ -15,6 +15,12 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
+## Unreleased
+
+### Changed
+
+- Migrate to ESM
+
 ## [1.0.0] - 2020-11-24
 
 ### Added

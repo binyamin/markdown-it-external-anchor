@@ -8,7 +8,7 @@
  * @param {string?} options.class add a class (preserves existing)
  */
 
-module.exports = (md, options={}) => {
+export default function (md, options={}) {
 
     // Finds external links
     let regex = /^https?:\/\//;
