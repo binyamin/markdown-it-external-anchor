@@ -29,10 +29,10 @@
 		"fmt": "biome format --write"
 	},
 	"dependencies": {
-		"@types/node": "^22.18.1"
+		"@types/node": "^22.19.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "~2.2.3",
+		"@biomejs/biome": "~2.3.8",
 		"markdown-it": "^14.1.0"
 	},
 	"peerDependencies": {
