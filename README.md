@@ -1,8 +1,10 @@
 # MarkdownIt External Anchor
+
 [![npm bundle size](https://img.shields.io/bundlephobia/min/markdown-it-external-anchor)](https://npmjs.com/package/markdown-it-external-anchor)
 [![CI Test](https://github.com/binyamin/markdown-it-external-anchor/workflows/Test/badge.svg)](https://github.com/binyamin/markdown-it-external-anchor/actions)
 
 Mark external, absolute links with appropriate rel & target attributes
+
 - Prevents XSS attacks & provides good UX
 - Does not affect HTML within markdown
 
@@ -21,16 +23,17 @@ import md from 'markdown-it';
 import pluginExternalAnchor from 'markdown-it-external-anchor';
 
 md.use(pluginExternalAnchor, {
-    domain: 'example.net',
-    class: 'external'
+	domain: 'example.net',
+	class: 'external',
 });
 
 md.render('[text](https://example.com)'); // => <a href="https://example/com" rel="noopener noreferrer" target="_blank">text</a>
 ```
 
 ### Options
+
 - **domain** (default: `null`) - A domain which is considered an internal link.
-    - When _domain_ is provided, localhost is implicit.
+  - When _domain_ is provided, localhost is implicit.
 - **class** (default: `null`) - a class name
 
 ## Maintenance
