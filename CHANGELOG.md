@@ -15,6 +15,12 @@ and this project tries to adhere to
 	**Security** in case of vulnerabilities.
 -->
 
+## [2.0.1] - 2026-10-27
+
+### Security
+
+- Updated dependencies
+
 ## [2.0.0] - 2025-08-24
 
 ### Changed
@@ -30,3 +36,4 @@ and this project tries to adhere to
 
 [1.0.0]: https://github.com/binyamin/markdown-it-external-anchor/releases/tag/v1.0.0
 [2.0.0]: https://github.com/binyamin/markdown-it-external-anchor/releases/tag/v2.0.0
+[2.0.1]: https://github.com/binyamin/markdown-it-external-anchor/releases/tag/v2.0.1
