@@ -3,10 +3,10 @@ name: Publish Package
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write # Required for OIDC
   contents: read
 
 jobs:
@@ -18,9 +18,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: lts/*
-          registry-url: 'https://registry.npmjs.org'
-          package-manager-cache: false  # never use caching in release builds
+          registry-url: "https://registry.npmjs.org"
+          package-manager-cache: false # never use caching in release builds
       - run: npm ci
       - run: npm run lint --if-present
       - run: npm test
-      - run: npm stage publish  # Or: npm publish
+      - run: npm stage publish # Or: npm publish
